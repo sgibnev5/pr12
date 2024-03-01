@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Практика</string>
+    <string name="igo">игорь</string>
+    <string name="error_empty_content">Контент не может быть пустым</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Praktika</string>
+    <string name="igo">igor</string>
+    val appName = getString(R.string.app_name)
+    val helloWorld = getString(R.string.hello)
+    <string name="error_empty_content" translatable="false">Content can\'t be empty</string>
+    <string name="chooser_share_post" translatable="false">Share post</string>
+
+</resources>

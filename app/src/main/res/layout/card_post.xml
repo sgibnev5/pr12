@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".FeedFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_spacing">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="menu,textView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Нетология. Университет интернет-профессий будущего"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="20 февраля в 15:00"
+        app:layout_constraintBottom_toBottomOf="@id/barrier"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autoLink="web"
+        android:text="Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен → http://netolo.gy/fyb"
+        app:layout_constraintBottom_toTopOf="@+id/barrier2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share"
+        style="@style/Widget.AppTheme.IconButton"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="12dp"
+        app:icon="@android:drawable/ic_menu_share"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/like"
+            style="@style/Widget.AppTheme.LikeButton"
+            android:layout_width="83dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:checkable="true"
+            app:icon="@drawable/heart_ser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:checked="@sample/posts.json/data/likedByMe"
+            tools:text="@sample/posts.json/data/likes" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu"
+        style="@style/Widget.AppTheme.IconButton"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        app:icon="@drawable/three_dots_vertical_svgrepo_com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
