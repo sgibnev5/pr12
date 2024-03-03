@@ -67,25 +67,25 @@ class FeedFragment : Fragment() {
                 setText(post.textView)
             }
         }
-       // binding.imageButton3.setOnClickListener {
-         //   with(binding.editTextTextMultiLine4) {
-           //     if (text.isBlank()) {
-             //       Toast.makeText(
-               //         this@FeedFragment,
-                 //       context.getString(R.string.error_empty_content),
-                   //     Toast.LENGTH_SHORT
-                    //).show()
-                    //return@setOnClickListener
-                //}
+        binding.imageButton3.setOnClickListener {
+          with(binding.editTextTextMultiLine4) {
+            if (text.isBlank()) {
+//                   Toast.makeText(
+//                       this@FeedFragment,
+//                        context.getString(R.string.error_empty_content),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+                    return@setOnClickListener
+                }
 
-               // viewModel.changeContent(text.toString())
-                //viewModel.save()
+                viewModel.changeContent(text.toString())
+                viewModel.save()
 
-                //setText("")
-                //clearFocus()
-                //AndroidUtils.hideKeyboard(this)
-            //}
-        //}
+                setText("")
+                clearFocus()
+                AndroidUtils.hideKeyboard(this)
+            }
+        }
         binding.list.adapter = adapter
         viewModel.data.observe(viewLifecycleOwner) { posts ->
             adapter.submitList(posts)

@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@android:drawable/ic_input_add"
+        app:srcCompat="@drawable/ic_launcher_foreground"
         tools:layout_editor_absoluteX="187dp"
         tools:layout_editor_absoluteY="630dp" />
 
